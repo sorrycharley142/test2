@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Advent Pro', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 1px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #d09c0b;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
+		<a id="planning" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> Planning</a>
+		<a id="finances" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-week"></i> Finances</a>
+		<a id="transactions" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i> Transactions</a>
+		<a id="internship" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-list-check"></i> Internship</a>
+		<a id="career" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-money-bill-wave"></i> Career</a>
+
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://www.notion.so/Charley-s-Dashboard-088d2b2d3f0d4c4cb2c38f1592096566", '_blank').focus();
+			else if (id == "planning")
+				window.open("https://www.notion.so/Planning-959041923da849b4a7a6f689251d08e7", '_blank').focus();
+			else if (id == "transactions")
+				window.open("https://www.notion.so/Simple-Budget-7c94f7d084814def896e5dd5111f4130", '_blank').focus();
+			else if (id == "internship")
+				window.open("https://www.notion.so/Internship-940b92be48a34c0bbfa2fe71db983a66", '_blank').focus();
+			else if (id == "career")
+				window.open("https://www.notion.so/Career-34e9eae518f948c4a7e7fb3c38d98fdc", '_blank').focus();
+
+		}
+	</script>
+
+
+</body>
+
+</html>
